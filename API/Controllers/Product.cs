@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Entities;
+using Infrastructure;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
@@ -6,9 +8,27 @@ namespace API.Controllers;
 [Route("[Controller]")]
 public class ProductController : ControllerBase
 {
-    [HttpGet]
-    public object HelloWorld()
+    //instance variable
+    private ProductRepository _productRepository;
+    
+    //constractor
+    public ProductController(ProductRepository repository)
     {
-        return "Hello World";
+        _productRepository = repository;
+    }
+
+    [HttpGet]
+    public List<Product> GetProducts()
+    {
+        return _productRepository.GetAllProducts();
+    }
+
+    //make an endpoint her to ensure created function in repository.
+    [HttpGet]
+    [Route("createDB")]
+    public string CreateDB()
+    {
+        _productRepository.CreateDB();
+        return "Db has been created";
     }
 }

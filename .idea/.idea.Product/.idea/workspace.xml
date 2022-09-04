@@ -9,9 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cfc1a60-61c9-46d3-8ddc-14a0b153bf69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/db.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Infrastructure/ProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Product/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Class1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/ProductDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -85,7 +89,7 @@
       <updated>1662294740573</updated>
       <workItem from="1662294747148" duration="84000" />
       <workItem from="1662295109670" duration="538000" />
-      <workItem from="1662295689188" duration="343000" />
+      <workItem from="1662295689188" duration="2895000" />
     </task>
     <task id="LOCAL-00001" summary="Infrastructure knows about Entites class.cs now . its a dependencise">
       <created>1662295639059</created>
@@ -94,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662295639059</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="APi knows about Infrastructure now">
+      <created>1662296056317</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662296056317</updated>
+    </task>
+    <task id="LOCAL-00003" summary=".">
+      <created>1662296070860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662296070860</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +135,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Infrastructure knows about Entites class.cs now . its a dependencise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Infrastructure knows about Entites class.cs now . its a dependencise" />
+    <MESSAGE value="APi knows about Infrastructure now" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
