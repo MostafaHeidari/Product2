@@ -7,6 +7,9 @@ public class ProductRepository
     //it is an Instance variable. the way to make instance variable write _productcContext
     private ProductDbContext _productContext;
 
+    public object ServiceLifeTime { get; private set; }
+
+
     //constractor
     public ProductRepository(ProductDbContext context)
     { 
@@ -29,6 +32,31 @@ public class ProductRepository
         return product;
     }
 
+    //Delete product method
+    public Product DeleteProduct(int id)
+    {
+        //trying to find id with an Exception if error
+        var product = _productContext.ProductTable.Find(id) ?? throw new KeyNotFoundException();
+        //removes product
+        _productContext.ProductTable.Remove(product);
+        //saving the remove
+        _productContext.SaveChanges();
+        //returning the removed product
+        return product;
+    }
+
+    /*
+    public Product DeleteProduct(int id)
+    {
+        using (var context = new ProductDbContext(_productContext, ServiceLifeTime.Scoped))
+        {
+            var obj = new Product { Id = id };
+            context.Remove(obj);
+            context.SaveChanges();
+            return obj;
+        }
+    }
+    */
     //we call some function that create that database.
     public void CreateDB()
     {

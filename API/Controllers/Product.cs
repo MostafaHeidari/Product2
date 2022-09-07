@@ -39,6 +39,17 @@ public class ProductController : ControllerBase
         return BadRequest(validation.ToString());
 
     }
+
+    //httpDelete in postman
+    [HttpDelete]
+    //the products id need be last http://localhost:4000/product/8 
+    [Route("{id}")]
+    //delete product using FromRoute to route id 
+    public Product DeleteProduct([FromRoute]int id)
+    {
+        //return delete Product id
+        return _productRepository.DeleteProduct(id);
+    }
     
     
     //make an endpoint her to ensure created function in repository.
