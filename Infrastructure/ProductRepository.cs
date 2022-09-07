@@ -45,6 +45,27 @@ public class ProductRepository
         return product;
     }
 
+
+
+    //update product method
+    public Product UpdateProduct(int id, Product product)
+    {
+        //trying to find id with an Exception if error
+        var product2 = _productContext.ProductTable.Find(id) ?? throw new KeyNotFoundException();
+        //update name
+        product2.Name = product.Name;
+        //update price
+        product2.price = product.price;
+        //update id
+        //product2.Id = product.Id; //dont work
+        //setting updates
+        _productContext.ProductTable.Update(product2);
+        //saving updates
+        _productContext.SaveChanges();
+        //returning updates
+        return product2;
+    }
+
     /*
     public Product DeleteProduct(int id)
     {

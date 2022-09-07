@@ -50,8 +50,21 @@ public class ProductController : ControllerBase
         //return delete Product id
         return _productRepository.DeleteProduct(id);
     }
-    
-    
+
+
+
+    //httpUpdate in postman
+    [HttpPut]
+    //the products id need be last http://localhost:4000/product/8 
+    [Route("{id}")]
+    //delete product using FromRoute to route id 
+    public Product UpdateProduct([FromRoute] int id, [FromBody] Product product)
+    {
+        //return update Product id and product
+        return _productRepository.UpdateProduct(id, product);
+    }
+
+
     //make an endpoint her to ensure created function in repository.
     [HttpGet]
     [Route("createDB")]
