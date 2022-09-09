@@ -19,6 +19,13 @@ builder.Services.AddDbContext<ProductDbContext>(options => options.UseSqlite(
     "Data source=db.db"
 ));
 
+
+builder.Services.AddDbContext<CategoryDbContext>(options => options.UseSqlite(
+
+    //we put the connection string SQLite, but her the file is on our pc witch has name db.db
+    "Data source=db.db"
+));
+
 builder.Services.AddScoped<ProductRepository>();
 
 // make new mapper configruamtion her 
@@ -26,6 +33,15 @@ var config = new MapperConfiguration(conf =>
 {
     conf.CreateMap<PostProductDTO, Product>();
 });
+
+// make new mapper configruamtion her 
+var config2 = new MapperConfiguration(conf =>
+{
+    conf.CreateMap<PostCategoryDTO, Product>();
+});
+
+var mapper2 = config2.CreateMapper();
+builder.Services.AddSingleton(mapper2);
 
 var mapper = config.CreateMapper();
 builder.Services.AddSingleton(mapper);

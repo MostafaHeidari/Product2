@@ -6,15 +6,17 @@ public class ProductRepository
 {
     //it is an Instance variable. the way to make instance variable write _productcContext
     private ProductDbContext _productContext;
+    private CategoryDbContext _categoryContext;
 
     public object ServiceLifeTime { get; private set; }
 
 
     //constractor
-    public ProductRepository(ProductDbContext context)
+    public ProductRepository(ProductDbContext context, CategoryDbContext ccontext)
     { 
         //this a normal denependeices injection 
         _productContext = context;
+        _categoryContext = ccontext;
     }
 
     // we make this function to make a list of product. list of quarries
@@ -23,6 +25,15 @@ public class ProductRepository
         // this ToList() is like to select alle statement that convert them to a list of entity product.
         // this like to fetch all product
         return _productContext.ProductTable.ToList();
+    }
+
+
+    public List<Category> GetAllCategorys()
+    {
+        // this ToList() is like to select alle statement that convert them to a list of entity product.
+        // this like to fetch all product
+        return _categoryContext.CategoryTable.ToList();
+       
     }
 
     public Product InsertProduct(Product product)

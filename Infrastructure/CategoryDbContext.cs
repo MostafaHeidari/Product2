@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 namespace Infrastructure
 // first we need a databaseContext, witch is need to implement a interface
 {
-    public class ProductDbContext: DbContext
+    public class CategoryDbContext : DbContext
     {
         // we need a constructor. DbContextOptions is configuration. ProductDbContext is our class name. option is just a name  
-        public ProductDbContext(DbContextOptions<ProductDbContext>options): base (options)
+        public CategoryDbContext(DbContextOptions<CategoryDbContext> options) : base(options)
         {
 
         }
@@ -16,14 +16,15 @@ namespace Infrastructure
         //inside this function, we use modelBuilder define things like primary key.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Product is the entity class. and p is for product.
-            // we make a primary key for our product table 
-            modelBuilder.Entity<Product>()
-                .Property(p => p.Id)
-                .ValueGeneratedOnAdd();  //this an about incrementing id now
+
+            //Category is the entity class. and p is for category.
+            // we make a primary key for our category table 
+            modelBuilder.Entity<Category>()
+                .Property(c => c.id)
+                .ValueGeneratedOnAdd();  //this an about incrementing id now 
         }
 
-        // DbSet can be thought of as a table. call it ProductTable
-        public DbSet<Product> ProductTable { get; set; }
+        // DbSet can be thought of as a table. call it CategoryTable
+        public DbSet<Category> CategoryTable { get; set; }
     }
 }
