@@ -1,11 +1,12 @@
-﻿using Entities;
+﻿using API.DTOs;
+using Entities;
 using FluentValidation;
 
 namespace API;
 
 // ProductValidater has to implement an interface
 
-public class ProductValidator : AbstractValidator<Product>
+public class ProductValidator : AbstractValidator<PostProductDTO>
 {
     //constructor 
     public ProductValidator()

@@ -1,4 +1,7 @@
 
+using API.DTOs;
+using AutoMapper;
+using Entities;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +20,15 @@ builder.Services.AddDbContext<ProductDbContext>(options => options.UseSqlite(
 ));
 
 builder.Services.AddScoped<ProductRepository>();
+
+// make new mapper configruamtion her 
+var config = new MapperConfiguration(conf =>
+{
+    conf.CreateMap<PostProductDTO, Product>();
+});
+
+var mapper = config.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 var app = builder.Build();
 

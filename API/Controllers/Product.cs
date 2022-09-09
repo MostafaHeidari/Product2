@@ -1,4 +1,6 @@
-﻿using Entities;
+﻿using API.DTOs;
+using AutoMapper;
+using Entities;
 using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,12 +13,14 @@ public class ProductController : ControllerBase
     //instance variable
     private ProductRepository _productRepository;
     private ProductValidator _productValidator;
+    private IMapper _mapper;
     
     //constractor
-    public ProductController(ProductRepository repository)
+    public ProductController(ProductRepository repository ,IMapper mapper)
     {
         _productRepository = repository;
         _productValidator = new ProductValidator();
+        _mapper = mapper;
     }
 
     [HttpGet]
@@ -27,17 +31,17 @@ public class ProductController : ControllerBase
 
     // we use to post endpoint to sende data to the server  
     [HttpPost]
-    public ActionResult CreateNewProduct(Product product)
+    public ActionResult CreateNewProduct(PostProductDTO dto)
     {
-        
-        var validation = _productValidator.Validate(product);
+        ProductValidator validator = new ProductValidator();
+        var validation = _productValidator.Validate(dto);
         if (validation.IsValid)
         {
+             // create a new product by using mapper.
+            Product product = _mapper.Map<Product>(dto);
             return Ok(_productRepository.InsertProduct(product));
         }
-
         return BadRequest(validation.ToString());
-
     }
 
     //httpDelete in postman
