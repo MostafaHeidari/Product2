@@ -9,20 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cfc1a60-61c9-46d3-8ddc-14a0b153bf69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/API/DTOs/PostProductDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Product/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Controllers/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/ProductValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/ProductValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/db.db" beforeDir="false" afterPath="$PROJECT_DIR$/API/db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/db.db-shm" beforeDir="false" afterPath="$PROJECT_DIR$/API/db.db-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/db.db-wal" beforeDir="false" afterPath="$PROJECT_DIR$/API/db.db-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/Properties/launchSettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/575c31ecc35a636b6f962cb71d53992552941a18982aae1c8e6c16305cc3761b/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
